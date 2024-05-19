@@ -11,6 +11,6 @@
     <title>Home</title>
 </head>
 <body>
-
+<h3>Welcome to SpringDataJpa project...</h3>
 </body>
 </html>
