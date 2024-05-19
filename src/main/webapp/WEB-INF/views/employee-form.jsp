@@ -129,7 +129,6 @@
                         <th>Gender</th>
                         <th>Skill</th>
                         <th>E-Mail</th>
-                        <th>Mobile</th>
                         <th>BirthDate</th>
                         <th>UserName</th>
                         <th>Action</th>
@@ -153,7 +152,6 @@
                         </c:forEach>
                     </td>
                     <td>${employee.email}</td>
-                    <td>${employee.mobile}</td>
                     <td><fmt:formatDate value="${employee.dateOfBirth}" pattern="yyyy/MM/dd"/></td>
                     <td>${employee.userName}</td>
                     <td>
