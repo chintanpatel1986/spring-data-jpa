@@ -45,7 +45,7 @@ public class EmployeeController {
         return "employee-form";
     }
 
-    @GetMapping
+    @GetMapping("/deleteEmployee")
     public String deleteEmployee(@RequestParam("employeeId")int employeeId) {
         if (employeeId > 0) {
             employeeService.deleteEmployee(employeeId);
