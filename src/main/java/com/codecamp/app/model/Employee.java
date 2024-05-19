@@ -1,6 +1,10 @@
 package com.codecamp.app.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -14,35 +18,47 @@ public class Employee {
     @Column(name = "employee_id", nullable = false)
     private int employeeId;
 
+    @NotEmpty(message = "NotEmpty.employee.firstName")
     @Column(name = "first_name", nullable = false)
     private String firstName;
 
+    @NotEmpty(message = "NotEmpty.employee.middleName")
     @Column(name = "middle_name", nullable = false)
     private String middleName;
 
+    @NotEmpty(message = "NotEmpty.employee.lastName")
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
+    @NotEmpty(message = "NotEmpty.employee.gender")
     @Column(name = "gender", nullable = false)
     private String gender;
 
+    @NotEmpty(message = "NotEmpty.employee.programmingSkill")
     @Column(name = "programming_skill", nullable = false)
     private String[] programmingSkill;
 
+    @NotEmpty(message = "NotEmpty.employee.email")
+    @Email(message = "Email.employee.email")
     @Column(name = "email", nullable = false)
     private String email;
 
+    @NotEmpty(message = "NotEmpty.employee.mobile")
     @Column(name = "mobile", nullable = false)
     private String mobile;
 
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy/MM/dd")
+    @NotNull(message = "NotNull.employee.dateOfBirth")
     @Column(name = "date_of_birth", nullable = false)
     private Date dateOfBirth;
 
+    @NotEmpty(message = "NotEmpty.employee.userName")
     @Column(name = "user_name", nullable = false)
     private String userName;
 
+    @NotEmpty(message = "NotEmpty.employee.password")
+    @Size(min = 8, max = 15, message = "Size.employee.password")
     @Column(name = "password", nullable = false)
     private String password;
 
