@@ -120,7 +120,7 @@
         </form:form>
     </div>
     <div class="container mt-5">
-        <c:if test="${!employeeList}">
+        <c:if test="${!empty employeeList}">
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
