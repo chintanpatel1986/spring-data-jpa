@@ -1,5 +1,6 @@
 package com.excellence.app.model;
 
+import com.excellence.app.validator.ValidDepartment;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -61,6 +62,7 @@ public class Employee {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @ValidDepartment
     @ManyToOne
     @JoinColumn(name = "department_id", nullable = false)
     private Department department;
